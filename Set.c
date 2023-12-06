@@ -5,7 +5,7 @@ int i;
 printf("{");
 for(i=0;i<n;i++)
 printf("%d",x[i]);
-print("}");
+printf("}");
 }
 void bitdis(int x[]){
 int i;
@@ -17,7 +17,7 @@ printf("%d",u[i]);
 }
 printf("}");
 }
-int pos(intx){
+int pos(int x){
 int i,f=-1;
 for(i=0;i<n;i++)
 {
@@ -37,9 +37,18 @@ printf("}");
 }
 void intersect(){
 int i;
-printf("\Intersection :{");
+printf("intersection :{");
 for(i=0;i<n;i++){
 if(a[i]&b[i]==1)
+printf("%d",u[i]);
+}
+printf("}");
+}
+void setdiff(){
+int i;
+printf("\nDifference :{");
+for(i=0;i<n;i++){
+if(a[i]&(!b[i])==1)
 printf("%d",u[i]);
 }
 printf("}");
@@ -48,30 +57,39 @@ void main(){
 int i,p,x;
 printf("Enter size of universal set:");\
 scanf("%d",&n);
-printf(Enter elements :");
+printf("Enter elements :");
 for(i=0;i<n;i++){
 scanf("%d",&u[i]);
 a[i]=b[i]=0;
 }
 printf("\n Enter size of set 1:");
-sacnf("%d",&p);
+scanf("%d",&p);
 printf("\nEnter elements :");
 for(i=0;i<p;i++){
 scanf("%d",&x);
-if(pos(x)!=-1;
+if(pos(x)!=-1);
 a[pos(x)]=1;
 }
-printf9"\NUniversal set:");
-dispaly(u);
+printf("\n Enter size of set 2:");
+scanf("%d",&p);
+printf("\nEnter elements :");
+for(i=0;i<p;i++){
+scanf("%d",&x);
+if(pos(x)!=-1);
+b[pos(x)]=1;
+}
+printf("\n Universal set:");
+display(u);
 printf("\nSet 1 bit string :");
-dispaly(a);
+display(a);
 printf("\nSet 2 bit string :");
-dispaly(b);
+display(b);
 printf("\nSet 1;");
 bitdis(a);
 printf("\nSet 2:");
 bitdis(b);
 setunion();
-intersect(0;
+intersect();
 setdiff();
 }
+
